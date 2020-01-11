@@ -167,6 +167,8 @@ export default class JPush {
    */
   static clearLocalNotifications(): void;
 
+  static clearAllNotifications(): void;
+
   //***************************************地理围栏***************************************
 
   /**

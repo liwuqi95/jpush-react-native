@@ -304,6 +304,15 @@ export default class JPush {
         }
     }
 
+    static clearAllNotifications () {
+        if (Platform.OS == "android") {
+            JPushModule.clearAllNotifications()
+        } else {
+            JPushModule.clearAllNotifications()
+        }
+    }
+
+
     //***************************************地理围栏***************************************
 
     /*

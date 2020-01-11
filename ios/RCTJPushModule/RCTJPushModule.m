@@ -1,6 +1,8 @@
 #import "RCTJPushModule.h"
 #import <CoreLocation/CoreLocation.h>
-
+#ifdef NSFoundationVersionNumber_iOS_9_x_Max
+#import <UserNotifications/UserNotifications.h>
+#endif
 //常量
 #define CODE           @"code"
 #define BADGE          @"badge"

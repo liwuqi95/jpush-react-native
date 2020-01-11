@@ -337,6 +337,14 @@ RCT_EXPORT_METHOD(clearLocalNotifications)
     [JPUSHService removeNotification:nil];
 }
 
+RCT_EXPORT_METHOD(clearAllNotifications) {
+  if ([[UIDevice currentDevice].systemVersion floatValue] >= 10.0) {
+    [UNUserNotificationCenter.currentNotificationCenter removeAllPendingNotificationRequests];
+  } else {
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
+  }
+}
+
 //地理围栏
 RCT_EXPORT_METHOD(removeGeofenceWithIdentifier:(NSDictionary *)params)
 {

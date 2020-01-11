@@ -413,6 +413,11 @@ public class JPushModule extends ReactContextBaseJavaModule {
     public void clearLocalNotifications() {
         JPushInterface.clearLocalNotifications(reactContext);
     }
+    
+    @ReactMethod
+    public void clearAllNotifications() {
+        JPushInterface.clearAllNotifications(getReactApplicationContext());
+    }
 
     @ReactMethod
     public void requestPermission() {
